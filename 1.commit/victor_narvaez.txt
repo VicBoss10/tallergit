@@ -46,3 +46,74 @@ sin cambios agregados al commit (usa "git add" y/o "git commit -a")
 Explicación: El comando git status nos dice que se han agregado o modificado archivos, los cuales hay que agregarlos para 
 que git les pueda hacer seguimiento.
 
+5. $ git status
+En la rama main
+Tu rama está actualizada con 'origin/main'.
+
+Cambios a ser confirmados:
+  (usa "git restore --staged <archivo>..." para sacar del área de stage)
+        modificados:     1.commit/sandwich.txt
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que será confirmado)
+        1.commit/victor_narvaez.txt
+
+Explicación: Ahora se ha agregado el archivo "sandwich.txt" y necesita confirmarse su adición, por otro lado 
+el archivo "nombre_apellido.txt" aun sigue sin seguimiento por parte de git.
+
+ 7. $ git status
+En la rama main
+Tu rama está adelantada a 'origin/main' por 1 commit.
+  (usa "git push" para publicar tus commits locales)
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que será confirmado)
+        1.commit/victor_narvaez.txt
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+
+Explicación: Git ya ha agregado el archivo de sandwich y ha realizado la confirmación por lo que ya tiene seguimiento del archivo
+y por esta razon ya no aparece en el status. El otro archivo aun sigue sin seguimiento.
+
+9. $ git log
+commit 95f2d8e7ce9dbc64ea50b89150f8058d060bd0a9 (HEAD -> main)
+Author: Víctor Narváez <vicboss2002@gmail.com.com>
+Date:   Tue Feb 18 10:31:20 2025 -0500
+
+    Agrego salsas
+
+commit 8bc28063118b282ed711e4c5adb0d80962f2e102
+Author: Víctor Narváez <vicboss2002@gmail.com.com>
+Date:   Tue Feb 18 10:27:34 2025 -0500
+
+    Agrego mi sandwich.txt
+:
+
+Explicación: Los commits aparecen en orden de mas nuevo a mas antiguo, aqui se nos informa de cuando y quien realizó los commits
+ademas nos pone un identificador para estos lo que nos permite tener cierto control sobre estos
+
+10. 
+$ git log --oneline
+95f2d8e (HEAD -> main) Agrego salsas
+8bc2806 Agrego mi sandwich.txt
+fafdc7f (origin/practica2025, origin/main, origin/HEAD) cambio readme.md
+5d6dc69 cambio de rama master a main en documentación
+3f74d4d primer commit
+
+Explicación: Este comando nos permite ver los commits en una sola linea, ademas nos muestra mas información que el comando anterior.
+
+$ git log --stat
+commit 95f2d8e7ce9dbc64ea50b89150f8058d060bd0a9 (HEAD -> main)
+Author: Víctor Narváez <vicboss2002@gmail.com.com>
+Date:   Tue Feb 18 10:31:20 2025 -0500
+
+    Agrego salsas
+
+ 1.commit/sandwich.txt       |  5 ++++-
+ 1.commit/victor_narvaez.txt | 48 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 52 insertions(+), 1 deletion(-)
+
+commit 8bc28063118b282ed711e4c5adb0d80962f2e102
+
+Explicación: Este comando nos muestra la información de cada commit linea por linea de todos los commits realizados de mas nuevo a mas antiguo
+
