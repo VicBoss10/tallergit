@@ -1,0 +1,48 @@
+Ejercicio 1
+
+1.1. Preguntas
+
+1. ¿Cómo se inicializa un repositorio local? (que comando se debe ejecutar?)
+Respuesta: Se usa el comando "git init" esto cuando ya se esta dentro 
+de la carpeta requerida
+
+2. ¿Cómo hago para que un directorio deje de ser controlado por git? (que comando se debe ejecutar?)
+Respuesta: Usamos el comando git rm -r --cached <nombre_del_directorio> esto hará que git deje de 
+controlar el directorio mas los archivos no serán alterados.
+
+3. Si agrego un archivo a un directorio que ya está siendo controlado por git, ¿está siendo controlado por git?
+Respuesta: No, al agregar archivos o alterar el codigo se debe hacer un "add" con el nombre del archivo y luego se hace un 
+commit para que quede registrado
+
+4. ¿Qué comando se utiliza para agregar un archivo al repositorio local?
+Respuesta: Se utiliza el comando "git add <nombre_del_archivo>"
+
+5. ¿Cómo determino que archivos fueron modificados? (que comando se debe ejecutar?)
+Respuesta: Para ver lo archivos modificados se usa el comando "git status"
+
+6. ¿Qué comando se utiliza para hacer un commit? 
+Respuesta: Se usa el comando "git commit -m "mensaje_del_commit" 
+
+7. En sus propias palabras, ¿qué es un commit?
+Respuesta: Se podria decir que es una confirmación de que se quiere guardar o conservar un cambio hecho
+
+1.2. Ejercicio Práctico
+
+3. $ git status
+En la rama main
+Tu rama está actualizada con 'origin/main'.
+
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+        modificados:     1.commit/sandwich.txt
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que será confirmado)
+        1.commit/victor_narvaez.txt
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+
+Explicación: El comando git status nos dice que se han agregado o modificado archivos, los cuales hay que agregarlos para 
+que git les pueda hacer seguimiento.
+

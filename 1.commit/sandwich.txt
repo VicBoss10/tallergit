@@ -5,3 +5,6 @@ jamón
 lechuga
 tomate
 pan
+salsa de tomate
+mayonesa
+tartara
